@@ -1,0 +1,15 @@
+Package: DataComputing
+Title: Functions and Data for the Data Computing book
+Version: 0.6
+Authors@R: person("Danny", "Kaplan", email = "kaplan@macalester.edu", role = c("aut", "cre"))
+Description:  Provides data tables used as examples in the Data Computing book
+    and exercises, manipulate apps for getting started with
+    ggplot, and assorted functions for reading data, drawing networks, and packaging Rmd
+    sources in the html result. 
+Depends:
+    R (>= 3.1), dplyr, ggplot2, tidyr, lubridate, stringr
+Uses: igraph, shiny, rmarkdown, stringdist, manipulate, base64enc
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 5.0.1
