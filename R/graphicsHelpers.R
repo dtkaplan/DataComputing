@@ -14,8 +14,13 @@
 #' @param title a title to put on the graphic
 #' @param ... reserved for future use.
 #' @param system the graphics system to use. Use "ggplot2"
+#' @param default for backward compatibility
 #' @param show see \code{mosaic::mUniPlot}
 #' @return Nothing.  Just for plotting side effects.
+#' 
+#' @importFrom manipulate manipulate picker button checkbox
+#' @importFrom mosaic mUSMap mWorldMap
+#' @importFrom grDevices colors palette
 #'
 #' @examples \dontrun{
 #'   scatterGraphHelper(HappinessIndex) # the use menu to map variables to aesthetics
@@ -28,6 +33,7 @@
 #' }
 #' @export
 scatterGraphHelper <- function(data) {
+  requireNamespace(manipulate)
   df = substitute(data)
   nm = varsByType(head(data))
   # nm$q is the quantitative variables.
@@ -61,10 +67,10 @@ distributionGraphHelper <- function (data, format = "histogram",default=format,
 
 #' @rdname graphicsHelpers
 #' @export
-barGraphHelper <- function(dat) {
-  if(!require(manipulate)) stop("Must install 'manipulate' package in RStudio.")
-  df = substitute(dat)
-  nm = varsByType(head(dat))
+barGraphHelper <- function(data) {
+  requireNamespace(manipulate)
+  df = substitute(data)
+  nm = varsByType(head(data))
   numberNames <- NAprepend(nm$q)
   factorNames <- NAprepend(nm$c)
   alignNames <- list(dodge="dodge",stack="stack",
@@ -109,7 +115,7 @@ USMap <-  function(data=NULL, key=NULL, fill=NULL, ...) {
   if(! key %in% vars) stop(paste(key, "is not a variable in", dataName))
   if(! fill %in% vars) stop(paste(fill, "is not a variable in", dataName))
 
-  mosaic::mUSMap(data,key=key,fill=fill, ...)
+  mUSMap(data,key=key,fill=fill, ...)
 }
 #' @rdname graphicsHelpers
 #' @export
@@ -125,7 +131,7 @@ WorldMap <-  function(data=NULL, key=NULL, fill=NULL, ...) {
   if(! key %in% vars) stop(paste(key, "is not a variable in", dataName))
   if(! fill %in% vars) stop(paste(fill, "is not a variable in", dataName))
 
-  mosaic::mWorldMap(data,key=key,fill=fill, ...)
+  mWorldMap(data,key=key,fill=fill, ...)
 }
 
 

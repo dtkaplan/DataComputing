@@ -11,8 +11,8 @@ The number of people who moved in from one country to another.  Data are provide
   A data frame with 107184 observations on the following 8 variables.
   \describe{
     \item{\code{sex}}{a factor with levels \code{Female} and \code{Male}}
-    \item{\code{to}}{three letter country codes indicating the destination of the migrants}
-    \item{\code{from}}{three letter country codes indicating where the migrants left}
+    \item{\code{destcode}}{three letter country codes indicating the destination of the migrants}
+    \item{\code{origincode}}{three letter country codes indicating where the migrants left}
     \item{\code{Y2000}}{Migration in year 2000.  The value is the number of people (males and females separately) who migrated from the origin country to the destination country.}
     \item{\code{Y1990}}{Migration in year 1990}
     \item{\code{Y1980}}{Migration in year 1980}

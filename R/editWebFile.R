@@ -11,6 +11,10 @@
 #'    editWebFile("www.mosaic-web.org/go/datasets/angle.R")
 #' }
 #' @importFrom stringr str_match_all str_match
+#' @importFrom methods show
+#' @importFrom utils download.file file.edit head read.csv
+#' @import dplyr
+#' @import ggplot2
 #' @export
 editWebFile <- function(url){
 
@@ -20,7 +24,7 @@ editWebFile <- function(url){
   filename <- unlist(partsOfName)[2]
   extension <- unlist(partsOfName)[3]
   tmpname <- tempfile(pattern=paste0(filename,"---"), fileext=extension)
-  download.file(url, dest = tmpname)
+  download.file(url, destfile = tmpname)
   file.edit(tmpname, title = filename)
   message("Remember to save as ",
           paste0(filename,extension),

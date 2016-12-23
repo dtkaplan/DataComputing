@@ -15,7 +15,7 @@ scatterGraphHelper(data)
 distributionGraphHelper(data, format = "histogram", default = format,
   system = "ggplot2", show = FALSE, title = "", ...)
 
-barGraphHelper(dat)
+barGraphHelper(data)
 
 densityGraphHelper(...)
 
@@ -27,6 +27,8 @@ WorldMap(data = NULL, key = NULL, fill = NULL, ...)
 \item{data}{Dataframe containing the variables that might be used in the plot.}
 
 \item{format}{for density plots, the format to use: "histogram", "density", "frequency polygon"}
+
+\item{default}{for backward compatibility}
 
 \item{system}{the graphics system to use. Use "ggplot2"}
 

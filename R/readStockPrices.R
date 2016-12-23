@@ -37,7 +37,7 @@ read_stock_prices <- function(symbols='F',
   for (symbol in symbols) {
     thisURL <- sprintf(stockURL, symbol, start_year, end_year, yahooCode)
     tmpname <- tempfile("stocks", fileext = "csv")
-    con <- try(suppressWarnings(download.file(thisURL, dest = tmpname)),
+    con <- try(suppressWarnings(download.file(thisURL, destfile = tmpname)),
                silent = TRUE)
     if (inherits(con, what = "try-error"))
       stop(paste("Symbol", symbol, "not found in years",

@@ -6,25 +6,27 @@
 \title{Helper functions for drawing networks}
 \usage{
 edgesToVertices(Edges, from, to)
+
+edgesForPlotting(Vertices, ID, x, y, Edges, from, to)
 }
 \arguments{
-\item{\code{from}}{Name of the <from> variable in the edgelist}
-
-\item{\code{to}}{Name of the <from> variable in the edgelist}
-
-\item{\code{Vertices}}{a data frame containing vertex IDs
-and x,y coordinates for each vertex.}
-
-\item{\code{ID}}{variable containing the ID of 
-the vertices}
-
-\item{\code{x}}{variable holding x-position of vertex}
-
-\item{\code{y}}{variable holding y-position of vertex}
-
-\item{\code{Edges}}{dataframe containing the from and to 
+\item{Edges}{dataframe containing the from and to 
 connection for each edge.  from and to should be drawn 
 from the same set as ID in Vertices.}
+
+\item{from}{Name of the <from> variable in the edgelist}
+
+\item{to}{Name of the <from> variable in the edgelist}
+
+\item{Vertices}{a data frame containing vertex IDs
+and x,y coordinates for each vertex.}
+
+\item{ID}{variable containing the ID of 
+the vertices}
+
+\item{x}{variable holding x-position of vertex}
+
+\item{y}{variable holding y-position of vertex}
 }
 \value{
 A data frame containing all the vertex IDs,

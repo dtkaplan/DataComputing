@@ -19,6 +19,10 @@
 #' The path should be relative to where the compilation of the Rmd file occurs, 
 #' which typically will be in the same directory as the Rmd file.additional character strings naming files.
 #' 
+#' @importFrom base64enc dataURI
+#' @importFrom knitr current_input
+#' @importFrom mime guess_type
+#' 
 #' @examples
 #' \dontrun{
 #' # in an R chunk in the Rmd file
@@ -34,7 +38,7 @@ includeSourceDocuments <- function(...) {
   toolTip <- paste('User',userName,'at',userHome)
   # Helper function
   attachFile <- function(file){
-    encodedFile <- base64enc::dataURI(file = file, mime = mime::guess_type(file)) 
+    encodedFile <- dataURI(file = file, mime = mime::guess_type(file)) 
     # mime = 'text/rmd')
     
     linkHTML <- paste0("<a href='%s' target='_blank' title='",

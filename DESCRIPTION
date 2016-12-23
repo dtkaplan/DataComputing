@@ -7,8 +7,9 @@ Description:  Provides data tables used as examples in the Data Computing book
     ggplot, and assorted functions for reading data, drawing networks, and packaging Rmd
     sources in the html result. 
 Depends:
-    R (>= 3.1), dplyr, ggplot2, tidyr, lubridate, stringr
-Uses: igraph, shiny, rmarkdown, stringdist, manipulate, base64enc
+    R (>= 3.1), dplyr, ggplot2
+Imports: methods, tidyr, lubridate, stringr, knitr, base64enc, manipulate, igraph, mime, mosaic, grDevices
+Uses: shiny, rmarkdown, stringdist
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

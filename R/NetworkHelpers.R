@@ -17,18 +17,20 @@
 #' \code{geom_point( V, aes(x=x,y=y) ) + }
 #' \code{geom_text( V, aes(x=x,y=y,label=ID))}
 #' 
+#' @importFrom igraph graph.data.frame layout.fruchterman.reingold vertex.attributes
+#' 
 #' 
 #' @rdname DrawingNetworks
 #' @aliases edgesToVertices edgesForPlotting
-#' @param \code{from} Name of the <from> variable in the edgelist
-#' @param \code{to} Name of the <from> variable in the edgelist
-#' @param \code{Vertices} a data frame containing vertex IDs
+#' @param from Name of the <from> variable in the edgelist
+#' @param to Name of the <from> variable in the edgelist
+#' @param Vertices a data frame containing vertex IDs
 #' and x,y coordinates for each vertex.
-#' @param \code{ID} variable containing the ID of 
+#' @param ID variable containing the ID of 
 #' the vertices
-#' @param \code{x} variable holding x-position of vertex
-#' @param \code{y} variable holding y-position of vertex
-#' @param \code{Edges} dataframe containing the from and to 
+#' @param x variable holding x-position of vertex
+#' @param y variable holding y-position of vertex
+#' @param Edges dataframe containing the from and to 
 #' connection for each edge.  from and to should be drawn 
 #' from the same set as ID in Vertices.
 #' @return A data frame containing all the vertex IDs,
@@ -55,10 +57,9 @@ edgesToVertices <- function(Edges, from, to) {
   return( Vertices )
 }
 
-
+#' @rdname DrawingNetworks
 #' @export
-edgesForPlotting <- function( Vertices, ID, x, y,
-                              Edges, from, to) {
+edgesForPlotting <- function(Vertices, ID, x, y, Edges, from, to) {
   
   vars <- structure(as.list(match.call()[-1]), class = "uneval")
   if (missing(from) || missing(to))

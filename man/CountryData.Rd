@@ -5,7 +5,7 @@
 Many variables on countries from the CIA factbook, 2014.
 }
 \description{
-The CIA Factbook has geographic, demographic, and economic data on a country-by-country basis.  In the description of the variables, the 4-digit number indicates the code used to specify that variable on the data and documentation web site.  For instance, \url{https://www.cia.gov/library/publications/the-world-factbook/fields/2153.html} contains documentation for variable code 2153, network users.
+The CIA Factbook has geographic, demographic, and economic data on a country-by-country basis.  In the description of the variables, the 4-digit number indicates the code used to specify that variable on the data and documentation web site.  For instance, https://www.cia.gov/library/publications/the-world-factbook/fields/2153.html contains documentation for variable code 2153, network users.
 }
 \usage{data("CountryData")}
 \format{
@@ -17,7 +17,7 @@ The CIA Factbook has geographic, demographic, and economic data on a country-by-
     \item{\code{growth}}{growth rate per year (\%),2002}
     \item{\code{birth}}{birth rate (#/1000), 2054}
     \item{\code{death}}{death rate (#/1000), 2066}
-    \item{\code{netMigr}}{net migration per year (#/1000). Difference between incoming and outgoing. 2112}
+    \item{\code{migr}}{net migration per year (#/1000). Difference between incoming and outgoing. 2112}
     \item{\code{maternal}}{maternal deaths per 100000 live births. 2223}
     \item{\code{infant}}{infant deaths per 1000 live births. 2091}
     \item{\code{life}}{life expectancy (years), 2102}

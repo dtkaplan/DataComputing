@@ -15,11 +15,13 @@ Cell Line descriptions in the NCI-60 dataset
     \item{\code{tissue}}{The cancer tissue from which the cell line originated \code{Breast} \code{CNS} \code{Colon} \code{Leukemia} \code{Melanoma} \code{Non-Small Cell Lung} \code{Ovarian} \code{Prostate} \code{Renal}}
     \item{\code{age}}{of the donor}
     \item{\code{sex}}{of the donor}
+    \item{\code{ploidy}}{the number of sets of chromosomes in the cell}
     \item{\code{prior.treatment}}{treatment of the donor}
     \item{\code{epithelial}}{is the cell of epithelial origin}
     \item{\code{histology}}{}
     \item{\code{p53}}{a factor with levels \code{?} \code{MT} \code{WT}}
     \item{\code{mdr}}{a numeric vector}
+    \item{\code{source}}{information about where the cells were collected from}
     \item{\code{doublingtime}}{a numeric vector}
   }
 }

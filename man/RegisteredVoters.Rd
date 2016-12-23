@@ -24,7 +24,7 @@ These are data from the Wake County Board of Elections. As so often happens, the
     \item{\code{mail_state_cd}}{Component of voter's mailing address}
     \item{\code{mail_street}}{Component of voter's mailing address}
     \item{\code{mail_zip_code}}{Component of voter's mailing address}
-    \item{\code{register_dt}}{Component of voter's mailing address}
+    \item{\code{registr_dt}}{Component of voter's mailing address}
     \item{\code{res_city}}{Component of voter's mailing address}
     \item{\code{res_state_cd}}{Component of voter's mailing address}
     \item{\code{res_unit_num}}{Component of voter's mailing address}

@@ -21,9 +21,6 @@ A translation table for cleaning the species names is in \code{OrdwaySpecies}.r
 \source{
 Jerald Dosch, Dept. of Biology, Macalester College: the manager of the Study Area.
 }
-\references{
-%%  ~~ possibly secondary sources and usages ~~
-}
 \examples{
 data(OrdwayBirdsOrig)
 }
