@@ -1,6 +1,6 @@
 Package: DataComputing
 Title: Functions and Data for the Data Computing book
-Version: 0.6.1
+Version: 0.6.1.9000
 Authors@R: person("Danny", "Kaplan", email = "kaplan@macalester.edu", role = c("aut", "cre"))
 Description:  Provides data tables used as examples in the Data Computing book
     and exercises, manipulate apps for getting started with
