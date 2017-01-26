@@ -33,7 +33,7 @@
 #' }
 #' @export
 scatterGraphHelper <- function(data) {
-  requireNamespace(manipulate)
+  requireNamespace("manipulate")
   df = substitute(data)
   nm = varsByType(head(data))
   # nm$q is the quantitative variables.
@@ -68,7 +68,7 @@ distributionGraphHelper <- function (data, format = "histogram",default=format,
 #' @rdname graphicsHelpers
 #' @export
 barGraphHelper <- function(data) {
-  requireNamespace(manipulate)
+  requireNamespace("manipulate")
   df = substitute(data)
   nm = varsByType(head(data))
   numberNames <- NAprepend(nm$q)
